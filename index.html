@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScrollIntoView + IntersectionObserver</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
+  <script src="src/js/script.js" defer></script>
+</head>
+<body>
+  <main class="main">
+    <section class="box">
+      <article>
+        <p>01 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores delectus magni reiciendis voluptatibus doloribus aspernatur aut. Sed asperiores sint maxime consequatur eum amet illum optio aliquam, quasi, id obcaecati deserunt neque! Laboriosam blanditiis expedita et, quidem eum sint ea? Architecto error reprehenderit hic, libero, ea quod, aperiam minus culpa suscipit repellendus fuga! Corporis debitis, iure blanditiis voluptatibus in perferendis sapiente.</p>
+        <p>02 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi reiciendis eveniet odio asperiores nostrum ratione saepe recusandae minus at a! Magni aliquam, mollitia soluta iusto excepturi dicta adipisci, rerum, assumenda quasi reiciendis odit obcaecati dolore! Quas voluptatibus aliquid, cum recusandae sit laudantium, illum natus consequatur iste, rerum esse architecto? Eaque reiciendis vel architecto illo ipsum eveniet error? Quod tempore accusamus praesentium eius, quis laudantium nobis odio nemo obcaecati, nulla, at eveniet hic nihil voluptate quae incidunt magnam ab corrupti optio exercitationem voluptatem placeat! Libero explicabo vitae est qui illo asperiores?</p>
+        <p>03 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odit, harum, eligendi doloribus saepe facere fuga illo quia tenetur error ex quis veniam repudiandae modi ipsum. Itaque quia quas at, minus sapiente voluptatum ullam fuga aperiam sed veritatis veniam asperiores!</p>
+        <p>04 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quidem nostrum. Delectus, atque incidunt! Ipsum nesciunt quod laborum. Libero inventore esse assumenda? Voluptatibus sint reprehenderit error delectus omnis doloribus officia, quidem quia accusantium laborum molestiae ratione eum. Molestiae ratione quod maiores nihil inventore neque eum hic dicta reiciendis et atque doloribus rem dolor, minus incidunt impedit perspiciatis illo, obcaecati a.</p>
+        <p>05 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil, enim modi perferendis iusto laborum eligendi labore ex praesentium. Eius explicabo rerum itaque necessitatibus, sint numquam ea, totam animi quia vitae quisquam, voluptatibus nemo ex exercitationem molestias temporibus voluptatem fugit fuga minima atque impedit aspernatur ab. Accusantium, rem possimus perspiciatis enim a laboriosam, cumque impedit amet earum illo deserunt doloribus optio corporis! Officia amet molestiae nesciunt sit veniam eum laudantium reiciendis. Ex rem totam ut dicta dolorem, consequatur nesciunt sunt, modi debitis possimus ipsa aliquam similique quae deleniti nulla. Incidunt ratione explicabo cupiditate laudantium iure amet excepturi rerum ipsa quisquam tempore odit culpa ea eius omnis ducimus qui sed atque sapiente sint temporibus, illum voluptatibus fuga dolorem. Nisi, voluptatem reprehenderit!</p>
+        <p>06 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium dignissimos dolore voluptate esse obcaecati officiis nesciunt unde qui quisquam? Nisi porro neque velit blanditiis facilis similique recusandae tenetur error, consequuntur aspernatur accusamus quos illo aperiam molestiae ipsam doloremque, sit impedit dolorem cumque praesentium aliquam eos iure. Itaque similique reiciendis, doloremque iste id nam a ad molestiae esse, nulla minima.</p>
+        <p>07 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odit, harum, eligendi doloribus saepe facere fuga illo quia tenetur error ex quis veniam repudiandae modi ipsum. Itaque quia quas at, minus sapiente voluptatum ullam fuga aperiam sed veritatis veniam asperiores!</p>
+        <p>08 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quidem nostrum. Delectus, atque incidunt! Ipsum nesciunt quod laborum. Libero inventore esse assumenda? Voluptatibus sint reprehenderit error delectus omnis doloribus officia, quidem quia accusantium laborum molestiae ratione eum. Molestiae ratione quod maiores nihil inventore neque eum hic dicta reiciendis et atque doloribus rem dolor, minus incidunt impedit perspiciatis illo, obcaecati a.</p>
+        <p>09 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nihil, enim modi perferendis iusto laborum eligendi labore ex praesentium. Eius explicabo rerum itaque necessitatibus, sint numquam ea, totam animi quia vitae quisquam, voluptatibus nemo ex exercitationem molestias temporibus voluptatem fugit fuga minima atque impedit aspernatur ab. Accusantium, rem possimus perspiciatis enim a laboriosam, cumque impedit amet earum illo deserunt doloribus optio corporis! Officia amet molestiae nesciunt sit veniam eum laudantium reiciendis. Ex rem totam ut dicta dolorem, consequatur nesciunt sunt, modi debitis possimus ipsa aliquam similique quae deleniti nulla. Incidunt ratione explicabo cupiditate laudantium iure amet excepturi rerum ipsa quisquam tempore odit culpa ea eius omnis ducimus qui sed atque sapiente sint temporibus, illum voluptatibus fuga dolorem. Nisi, voluptatem reprehenderit!</p>
+        <p>10 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, facilis. Sequi voluptatibus numquam quaerat ipsam? Corporis, voluptates officiis. Neque pariatur maiores, reprehenderit ipsa saepe repudiandae beatae aliquid suscipit quae voluptates!</p>
+      </article>
+    </section>
+    <div class="pagination">
+      <button class="btn js-btn-bottom" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
+          <path d="M11.74 7.7a.75.75 0 111.02 1.1l-4.25 4a.75.75 0 01-1.02 0l-4.25-4a.75.75 0 111.02-1.1L8 11.226 11.74 7.7zm0-4a.75.75 0 111.02 1.1l-4.25 4a.75.75 0 01-1.02 0l-4.25-4a.75.75 0 111.02-1.1L8 7.227 11.74 3.7z" fill="#ffffff"/>
+        </svg>
+      </button>
+      <button class="btn js-btn-down" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+          <path d="M13.418 7.859a.695.695 0 01.978 0 .68.68 0 010 .969l-3.908 3.83a.697.697 0 01-.979 0l-3.908-3.83a.68.68 0 010-.969.695.695 0 01.978 0L10 11l3.418-3.141z" fill="#ffffff"/>
+        </svg>
+      </button>
+      <button class="btn js-btn-up" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+          <path d="M6.582 12.141a.695.695 0 01-.978 0 .68.68 0 010-.969l3.908-3.83a.697.697 0 01.979 0l3.908 3.83a.68.68 0 010 .969.697.697 0 01-.979 0L10 9l-3.418 3.141z" fill="#ffffff"/>
+        </svg>
+      </button>
+      <button class="btn js-btn-top" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
+          <path d="M4.26 8.3a.75.75 0 11-1.02-1.1l4.25-4a.75.75 0 011.02 0l4.25 4a.75.75 0 11-1.02 1.1L8 4.773 4.26 8.3zm0 4a.75.75 0 01-1.02-1.1l4.25-4a.75.75 0 011.02 0l4.25 4a.75.75 0 11-1.02 1.1L8 8.773 4.26 12.3z" fill="#ffffff"/>
+        </svg>
+      </button>
+    </div>
+  </main>
+</body>
+</html>

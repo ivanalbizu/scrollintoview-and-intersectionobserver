@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: 400;
+  padding: .7rem 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --width-content: 620px;
+  --padding-content: clamp(20px, 3vw, 40px);
+}
+
+* {
+  scrollbar-color: #555 #f1f1f1;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background-color: #ccc;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem .5rem;
+}
+
+.box {
+  background-color: #0f1582;
+  color: #fff;
+  padding: var(--padding-content);
+  width: var(--width-content);
+  max-width: 100%;
+  height: 400px;
+  max-height: 80vh;
+  overflow: hidden auto;
+}
+
+.box p:nth-child(even) {
+  color: #bcbdbd;
+}
+
+.pagination {
+  width: var(--width-content);
+  max-width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.btn {
+  appearance: none;
+  background: brown;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+.btn svg {
+  pointer-events: none;
+}
